@@ -12,7 +12,7 @@ app.use(express.json())
 let notes = [
   {
     id: 1,
-    content: "HTML is easy as eeerre",
+    content: "HTML is easy as hehe",
     important: true
   },
   {
@@ -62,6 +62,7 @@ const generateId = () => {
   return maxId + 1
 }
 
+
 app.post('/api/notes', (request, response) => {
   const body = request.body
 
@@ -77,7 +78,6 @@ app.post('/api/notes', (request, response) => {
     id: generateId(),
   }
 
-  notes = notes.concat(note)
 
   response.json(note)
 })
